@@ -158,12 +158,10 @@ void loop () {
 							1000 // intervalo de emisión
 							);*/
 
-              
-
   // 
   // mido y publico
   // 
-  elPublicador.publicarCoXTemp(11,14,500);
+  elPublicador.publicarCoXTemp(valorCO2,valorTemperatura,500);
   Serial.println(valorCO2);
   Serial.println(valorTemperatura);
 

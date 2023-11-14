@@ -1,4 +1,3 @@
-
 // -*- mode: c++ -*-
 
 // --------------------------------------------------------------
@@ -16,7 +15,6 @@ class Publicador {
   // ............................................................
 private:
 
-  // nombre de la emisora
   uint8_t beaconUUID[16] = { 
 	'P', 'E', 'R', '-', 'P', 'U', 'I', 'G', 
 	'D', 'E', 'M', 'O', 'O', 'O', 'N', 'T'
@@ -95,7 +93,6 @@ public:
   } // ()
 
   // ............................................................
-  // Función para publicar el valor de temperatura como un anuncio Beacon.
   // ............................................................
   void publicarTemperatura( int16_t valorTemperatura,
 							uint8_t contador, long tiempoEspera ) {
@@ -112,7 +109,7 @@ public:
   } // ()
 	
 
-  // Función para publicar el valor de concentración de COx y temperatura como un anuncio Beacon.
+
   void publicarCoXTemp(int16_t valorCox, int16_t valorTemperatura,long tiempoEspera)
   {
   (*this).laEmisora.emitirAnuncioIBeacon( (*this).beaconUUID, 
